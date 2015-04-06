@@ -1,0 +1,55 @@
+Date: 04/03/15
+
+MongoDB:
+Collection of documents(aka objects).
+
+Collection name: scores
+> db.scores
+
+Insert/Save:
+
+var Object = {name:'foo',age:20,address:'701 First Ave'};
+db.scores.save(Object);
+
+var Object2 = {name:'bar',age:21,address:'702 First Ave'};
+db.scores.insert(Object2);
+
+Update:
+
+db.scores.update({name:'bar'},{age:22,address: '703 First Ave'});
+db.scores.update({name:'bar'},{'$addToSet':{'lang':['en']}});
+db.scores.update({name:'bar'},{'$set':{'age':24}});
+db.scores.update({name:'bar'},{'$push':{'lang':'in'}});
+db.scores.update({name:'bar'},{'$pull':{'lang':'in'}});
+
+Delete:
+
+db.scores.remove({name:'bar'});
+db.scores.remove({age:{'$gt':20}});
+db.scores.remove({});//removes everything
+
+
+Listing/Search:
+
+db.scores.find(); - will result in all records
+db.scores.find({name:'foo'}); - will result in records with name='foo'
+db.scores.find({age:{'$gt':31}}); - will result in records with age greater than 31
+db.scores.find({age:{'$lt':21}}); - will result in records with age less than 21
+db.scores.find({name:{$in:['Rupa','foo']}});
+
+Possible conditions:
+$lt - less than
+$gt - greater than
+$lte - less than or equal
+$gte - greater than or equal
+$ne - not equal
+$in - exists in array
+
+
+
+
+
+
+
+
+

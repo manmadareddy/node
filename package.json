@@ -1,0 +1,24 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Node learnings",
+  "main": "webapp.js",
+  "scripts": {
+    "test": "test",
+    "start": "node webapp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manmadareddy/node.git"
+  },
+  "dependencies": {
+    "mongodb": "~2.0"
+  },
+  "author": "Manmada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manmadareddy/node/issues"
+  },
+  "homepage": "https://github.com/manmadareddy/node"
+}
+//https://github.com/mongodb/node-mongodb-native

@@ -1,5 +1,5 @@
 var server = require('./server'),
-    router  = require('./router'),
+    router = require('./router'),
     reqHandlers = require("./requestHandlers"),
     handle = {};
     //route handling
@@ -7,5 +7,6 @@ var server = require('./server'),
     handle['/start'] = reqHandlers.start;
     handle['/upload'] = reqHandlers.upload;
     handle['/show'] = reqHandlers.show;
-
+    handle['/todo'] = reqHandlers.todo;
+    handle['/addrecord'] = reqHandlers.add;
     server.start(router.route, handle);
